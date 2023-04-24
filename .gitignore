@@ -172,7 +172,7 @@ test.py
 
 # folders to be ignored
 /data
-/plotly2html/html
+/py-plotly2html/html/
 
 ### Other non-python related ignores (System Related) ###
 ### Linux ###
