@@ -152,7 +152,7 @@ app.layout = html.Div([
 )
 def load_data(_date, _data):
     # get data root directory path
-    DATA_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data')
+    DATA_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data') # if data files inside of dash-app root, remove 1 os.path.dirname call
     # get prior/posterior file paths
     data_fp = os.path.join(DATA_ROOT, '202107_101.nc')
     # read the data into datatree data structure
@@ -182,7 +182,7 @@ def load_basemap(_ts, _data):
     
     res = 'i'
     # get data root directory path
-    DATA_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data')
+    DATA_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data') # if data files inside of dash-app root, remove 1 os.path.dirname call
     # get no_antartica/antartica file paths
     no_antartica_fp = os.path.join(DATA_ROOT, f'GSHHS_shp/{res}/GSHHS_{res}_L1.shp')
     antartica_fp = os.path.join(DATA_ROOT, f'GSHHS_shp/{res}/GSHHS_{res}_L6.shp')
