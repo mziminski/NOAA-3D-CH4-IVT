@@ -170,7 +170,9 @@ cython_debug/
 # testing code playground
 test.py
 
+# folders to be ignored
 /data
+/plotly2html/html
 
 ### Other non-python related ignores (System Related) ###
 ### Linux ###
