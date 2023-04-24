@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+xarray-datatree = "*"
+xarray = "*"
+flask = "*"
+geopandas = "*"
+matplotlib = "*"
+cartopy = "*"
+netcdf4 = "*"
+plotly = "*"
+geos = "*"
+nbformat = "*"
+dash = "*"
+dash-bootstrap-components = "*"
+h5netcdf = "*"
+
+[dev-packages]
+ipykernel = "*"
+
+[requires]
+python_version = "3.11"
