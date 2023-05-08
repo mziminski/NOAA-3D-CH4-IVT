@@ -244,8 +244,7 @@ def gen_vol_plt(_data, _basemap, _level):
         z=[0]*len(_json['x']), 
         mode='lines', 
         line=dict(color='white', width=3),
-        hovertemplate='',
-        text='',
+        hoverinfo='skip',
     ))
 
     # plot green pane for testing
@@ -341,8 +340,7 @@ def gen_sphr_plt(_data, _basemap, _pressure):
         x=bx, y=by, z=bz, 
         mode='lines', 
         line=dict(color='white', width=3),
-        hovertemplate='',
-        text='',
+        hoverinfo='skip',
     ))
 
 
