@@ -123,20 +123,20 @@ app.layout = html.Div([
     html.Hr(),
     html.Div(className='container-fluid bg-white', children=[
         html.Div(className='row', children=[
+            html.Div(className='col-6', id='gray', children=[
+                dcc.Loading(
+                    id='loading-2',
+                    children=[dcc.Graph(id='sphr-plt', figure={})],
+                    type='circle',
+                )
+                
+            ]),
             html.Div(className='col-6', children=[
                 dcc.Loading(
                     id='loading-1',
                     children=[dcc.Graph(id='vol-plt', figure={})],
                     type="circle",
                     style={'color':'#000000'}
-                )
-                
-            ]),
-            html.Div(className='col-6', id='gray', children=[
-                dcc.Loading(
-                    id='loading-2',
-                    children=[dcc.Graph(id='sphr-plt', figure={})],
-                    type='circle',
                 )
                 
             ]),
