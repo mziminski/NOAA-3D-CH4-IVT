@@ -315,16 +315,19 @@ def gen_sphr_plt(_data, _basemap, _pressure):
 
     x,y,z = texture2sphere(texture, 1)  # 1 is the radius of the sphere
 
+    # https://stackoverflow.com/questions/34357617/append-2d-array-to-3d-array-extending-third-dimension
+    custom_data = np.append(np.array(sphr2cart(x,y,z)).T, np.atleast_3d(texture.T), axis=2)
+
     fig.add_trace(go.Surface(
         name='',
         x=x, y=y, z=z,
-        customdata=np.array([sphr2cart(x,y,z)]).T,
+        customdata=custom_data,
         surfacecolor=texture,
         coloraxis='coloraxis',
         hovertemplate =
         '<b>lon</b>: %{customdata[0]:,.3f}°<br>'+
         '<b>lat</b>: %{customdata[1]:,.3f}°<br>'+
-        '<b>Mix</b>: %{surfacecolor:,.3f} ppb<br>',
+        '<b>Mix</b>: %{customdata[2]:,.3f} ppb<br>',
     ))
 
     # plot basemap
